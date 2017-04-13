@@ -1,4 +1,4 @@
-package com.ignaciojgp.charactersheet;
+package com.ignaciojgp.charactersheet.Views;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,9 +15,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.ignaciojgp.charactersheet.Characters.CharacterDefinition;
 import com.ignaciojgp.charactersheet.Characters.CharacterController;
 import com.ignaciojgp.charactersheet.DTO.Character;
+import com.ignaciojgp.charactersheet.R;
 
 import java.util.List;
 import java.util.UUID;
@@ -40,7 +40,7 @@ public class CharacterListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_character_list);
+        setContentView( R.layout.activity_character_list);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -85,7 +85,7 @@ public class CharacterListActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.id = mValues.get(position).id;
-
+            holder.character = mValues.get(position);
             holder.mIdView.setText(mValues.get(position).name);
             holder.mContentView.setText("N:"+mValues.get(position).experiencePoints+"");
 
@@ -96,6 +96,8 @@ public class CharacterListActivity extends AppCompatActivity {
                         Context context = v.getContext();
                         Intent intent = new Intent(context, CharacterView.class);
                         intent.putExtra(ARG_ITEM_ID, holder.id.toString());
+
+                        CharacterController.setSelectedCharacter( holder.character );
 
                         context.startActivity(intent);
 
@@ -113,6 +115,7 @@ public class CharacterListActivity extends AppCompatActivity {
             public final TextView mIdView;
             public final TextView mContentView;
             public UUID id;
+            public Character character;
 
             public ViewHolder(View view) {
                 super(view);

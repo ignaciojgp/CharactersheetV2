@@ -2,12 +2,485 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ignaciojgp.charactersheet.ResumeFragment">
+    tools:context="com.ignaciojgp.charactersheet.Views.ResumeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Resumen" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="@string/res_secc_general"
+                style="@style/SectionHeader"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:columnCount="3"
+                android:rowCount="2">
+
+                <TextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentLeft="true"
+                    android:text="Level"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_level"
+
+                    android:layout_width="100dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="20dp"
+
+
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+
+                <TextView
+                    android:id="@+id/tv_hp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="Hit points"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_hp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/tv_damage"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Damage"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+
+                    android:id="@+id/et_damage"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:text="1"
+                    android:textAlignment="center"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:columnCount="3"
+                android:rowCount="2">
+
+                <TextView
+                    android:id="@+id/tv_ac"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentLeft="true"
+                    android:text="AC"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_ac"
+
+                    android:layout_width="100dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="20dp"
+
+
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+
+                <TextView
+                    android:id="@+id/tv_touch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="Touch"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_touch"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/tv_flatfooted"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="FLAT-FOOTED "
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+
+                    android:id="@+id/ed_flatfooted"
+                    android:layout_width="100dp"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+            </RelativeLayout>
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Attack"
+                style="@style/SectionHeader"
+
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:columnCount="3"
+                android:rowCount="2">
+
+                <TextView
+                    android:id="@+id/tv_atbase"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentLeft="true"
+                    android:text="Base"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_atbase"
+
+                    android:layout_width="100dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="20dp"
+
+
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+
+                <TextView
+                    android:id="@+id/tv_atmelee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="Melee"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_atmelee"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/tv_atranged"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Ranged "
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+
+                    android:id="@+id/ed_atranged"
+                    android:layout_width="100dp"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+            </RelativeLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Saving Throws"
+                style="@style/SectionHeader"
+
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:columnCount="3"
+                android:rowCount="2">
+
+                <TextView
+                    android:id="@+id/tv_stfortitude"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentLeft="true"
+                    android:text="Fortitude"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_stfortitude"
+
+                    android:layout_width="100dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="20dp"
+
+
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+
+                <TextView
+                    android:id="@+id/tv_streflex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="Reflex"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_streflex"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/tv_stwill"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Will "
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+
+                    android:id="@+id/ed_stwill"
+                    android:layout_width="100dp"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+            </RelativeLayout>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:text="Abilities"
+                style="@style/SectionHeader"
+
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:columnCount="3"
+                android:rowCount="2">
+
+                <TextView
+                    android:id="@+id/tv_ab_frz"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentLeft="true"
+                    android:text="STR"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_ab_frz"
+
+                    android:layout_width="100dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="20dp"
+
+
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+
+                <TextView
+                    android:id="@+id/tv_ab_dex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="DEX"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_ab_dex"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/tv_ab_con"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="CON"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+
+                    android:id="@+id/ed_ab_con"
+                    android:layout_width="100dp"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:columnCount="3"
+                android:rowCount="2">
+
+                <TextView
+                    android:id="@+id/tv_ab_int"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignParentLeft="true"
+                    android:text="INT"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_ab_int"
+
+                    android:layout_width="100dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="20dp"
+
+
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+
+                <TextView
+                    android:id="@+id/tv_ab_wis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+
+                    android:text="WIS"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_ab_wis"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/tv_ab_cha"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="CHA"
+                    android:textAlignment="center"
+                    android:textStyle="bold"/>
+
+                <EditText
+
+                    android:id="@+id/ed_ab_cha"
+                    android:layout_width="100dp"
+                    android:layout_marginTop="20dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="1"
+                    android:textAlignment="center"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </FrameLayout>

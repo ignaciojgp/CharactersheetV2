@@ -9,5 +9,5 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.ignaciojgp.charactersheet.CharacterListActivity"
+    tools:context="com.ignaciojgp.charactersheet.Views.CharacterListActivity"
     tools:listitem="@layout/character_list_content" />

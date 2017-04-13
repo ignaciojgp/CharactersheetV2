@@ -10,4 +10,68 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Secciones de la hoja-->
+
+    <string name="sec_resume">Resume</string>
+    <string name="sec_class">Character Classes</string>
+    <string name="sec_skills">Skills</string>
+    <string name="sec_mods">Modifiers</string>
+    <string name="sec_spells">Spells</string>
+    <string name="sec_gear">Gear</string>
+
+
+    <!--Skills-->
+    <string name="appraise">Appraise</string>
+    <string name="autohypnosis">Autohypnosis</string>
+    <string name="balance">Balance</string>
+    <string name="bluff">Bluff</string>
+    <string name="climb">Climb</string>
+    <string name="concentration">Concentration</string>
+    <string name="control_shape">Control shape</string>
+    <string name="craft">Craft</string>
+    <string name="decipher_script">Decipher script</string>
+    <string name="diplomacy">Diplomacy</string>
+    <string name="disable_device">Disable device</string>
+    <string name="disguise">Disguise</string>
+    <string name="escape_artist">Escape artist</string>
+    <string name="forgery">Forgery</string>
+    <string name="gather_information">Gather information</string>
+    <string name="handle_animal">Handle animal</string>
+    <string name="heal">Heal</string>
+    <string name="hide">Hide</string>
+    <string name="intimidate">Intimidate</string>
+    <string name="jump">Jump</string>
+    <string name="knowledge">Knowledge</string>
+    <string name="listen">Listen</string>
+    <string name="move_silently">Move silently</string>
+    <string name="open_lock">Open lock</string>
+    <string name="perform">Perform</string>
+    <string name="psicraft">Psicraft</string>
+    <string name="profession">Profession</string>
+    <string name="ride">Ride</string>
+    <string name="search">Search</string>
+    <string name="sense_motive">Sense motive</string>
+    <string name="sleight_of_hand">Sleight of hand</string>
+    <string name="speak_language">Speak language</string>
+    <string name="spellcraft">Spellcraft</string>
+    <string name="spot">Spot</string>
+    <string name="survival">Survival</string>
+    <string name="swim">Swim</string>
+    <string name="tumble">Tumble</string>
+    <string name="use_magic_device">Use magic device</string>
+    <string name="use_psionic_device">Use psionic device</string>
+    <string name="use_rope">Use rope</string>
+    <string name="knowledge_arcana">Knowledge arcana</string>
+    <string name="knowledge_dungeoneering">Knowledge dungeoneering</string>
+    <string name="knowledge_engineering">Knowledge engineering</string>
+    <string name="knowledge_geography">Knowledge geography</string>
+    <string name="knowledge_history">Knowledge history</string>
+    <string name="knowledge_local">Knowledge local</string>
+    <string name="knowledge_nature">Knowledge nature</string>
+    <string name="knowledge_nobility">Knowledge nobility</string>
+    <string name="knowledge_planes">Knowledge planes</string>
+    <string name="knowledge_religion">Knowledge religion</string>
+    <string name="res_secc_general">General</string>
+
 </resources>

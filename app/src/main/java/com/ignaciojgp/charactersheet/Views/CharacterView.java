@@ -1,14 +1,9 @@
-package com.ignaciojgp.charactersheet;
+package com.ignaciojgp.charactersheet.Views;
 
 
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -17,7 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
+
+import com.ignaciojgp.charactersheet.R;
 
 import java.util.UUID;
 
@@ -27,11 +23,12 @@ public class CharacterView extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_character_view);
+        setContentView( R.layout.activity_character_view);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        UUID idCharacter = UUID.fromString( getIntent().getExtras().getString(CharacterListActivity.ARG_ITEM_ID));
+
+        UUID idCharacter = UUID.fromString( getIntent().getExtras().getString( CharacterListActivity.ARG_ITEM_ID));
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -43,11 +40,16 @@ public class CharacterView extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Fragment f = new ResumeFragment();
 
-        FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
-        trans.add( R.id.frame,f );
-        trans.commit();
+        if(savedInstanceState == null) {
+            Fragment f = new ResumeFragment();
+
+            FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
+            trans.add( R.id.frame, f );
+            trans.commit();
+        }
+
+
 
     }
 
@@ -91,14 +93,20 @@ public class CharacterView extends AppCompatActivity
         Fragment f = null;
         if (id == R.id.nav_resume) {
             f = new ResumeFragment();
+            setTitle( getString( R.string.sec_resume ) );
         } else if (id == R.id.nav_class) {
             f = new ClassFragment();
-
+            setTitle( getString( R.string.sec_class ) );
+        } else if (id == R.id.nav_skill) {
+            f = new SkillsFragment();
+            setTitle( getString( R.string.sec_skills ) );
         } else if (id == R.id.nav_mods) {
-
+            setTitle( getString( R.string.sec_mods ) );
         } else if (id == R.id.nav_spells) {
-
-        } else if (id == R.id.nav_share) {
+            setTitle( getString( R.string.sec_spells ) );
+        } else if (id == R.id.nav_gear) {
+            setTitle( getString( R.string.sec_gear ) );
+            f = new GearFragment();
 
         } else if (id == R.id.nav_send) {
 

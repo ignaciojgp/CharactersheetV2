@@ -2,9 +2,10 @@ package com.ignaciojgp.charactersheet.DTO;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.UUID;
 
-import static com.ignaciojgp.charactersheet.Characters.CharacterDefinition.skills;
+import static com.ignaciojgp.charactersheet.Characters.CharacterDefinition.characterSkills;
 
 /**
  * Created by ignacio on 11/04/17.
@@ -20,7 +21,7 @@ public class Character implements Serializable {
     public int damage, hp, speed, damageReduction, experiencePoints, spellSave, arcaneSpellFailure;
     public int[] staticsValues = new int[6];
 
-    public Skill[] skillsValues = new Skill[skills.length];
+    public Map<characterSkills,Skill> skillsValues;
 
     public ArrayList<Class> classes;
     public ArrayList<Modifier> mods;
